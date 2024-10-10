@@ -1,0 +1,134 @@
+/* Styl bazowy */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  background-image: url("../img/bg1.jpg");
+}
+
+/* Nagłówek */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Główna zawartość */
+.container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stylizacja nagłówków */
+h2, h3 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* Paragrafy */
+p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #555;
+  background-color: #f0f0f0;
+
+}
+
+/* Listy */
+ul {
+  margin: 10px 0;
+  padding: 0 20px;
+  list-style-type: disc;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+/* Stopka */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+img {
+  border: 2px solid black;
+  width: 35%;
+}
+
+/* Stylowanie dla ekranów o szerokości 768px lub mniejszej */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  p, ul li {
+    font-size: 0.95em;
+  }
+}
+
+/* Stylowanie dla ekranów o szerokości 480px lub mniejszej */
+@media (max-width: 480px) {
+  header, footer {
+    padding: 15px 0;
+    font-size: 0.9em;
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  p, ul li {
+    font-size: 0.9em;
+  }
+}
