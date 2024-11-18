@@ -66,29 +66,25 @@ function displayForecast(data) {
     forecast.innerHTML = "<h3>Prognoza 5-dniowa:</h3>";
 
     for (let index = 0; index < data.list.length; index++) {
-        // Only process every 8th entry
         if (index % 8 === 0) {
-            const forecast_data = data.list[index]; // Access current element
+            const forecast_data = data.list[index];
 
-            // Format the date and time to the Polish locale
-            const date = new Date(forecast_data.dt_txt); // Parse the date string
+            const date = new Date(forecast_data.dt_txt);
             const formattedDate = date.toLocaleString('pl-PL', {
-                weekday: 'long',  // Full weekday name
-                day: 'numeric',   // Day of the month
-                month: 'long',    // Full month name
-                year: 'numeric',  // Full year
-                hour: '2-digit',  // Hours (2-digit format)
-                minute: '2-digit' // Minutes (2-digit format)
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
             });
 
-            // Create the forecast element
             const forecast_element = document.createElement("div");
             forecast_element.classList.add("forecast-item");
 
             const icon_code = forecast_data.weather[0].icon;
             const icon_url = `https://openweathermap.org/img/wn/${icon_code}@2x.png`;
 
-            // Add content to the forecast element
             forecast_element.innerHTML = `
             <img src="${icon_url}" alt="${forecast_data.weather[0].description}">
             <div>
@@ -97,8 +93,7 @@ function displayForecast(data) {
                 <p>Opis: ${forecast_data.weather[0].description}</p>
             </div>
         `;
-
-            // Append the forecast item to the container
+            
             forecast.appendChild(forecast_element);
         }
     }
