@@ -1,0 +1,189 @@
+/* page3.css - Styl pastelowy */
+
+/* Ogólny styl strony */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8edeb; /* Jasny róż */
+    color: #333; /* Neutralny szary */
+}
+
+/* Gradient pastelowy na tło */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f8edeb, #ffe5d9, #d8e2dc, #ece4db, #fec5bb);
+    background-size: 400% 400%;
+    animation: pastel-gradient 10s ease infinite;
+    color: #333;
+}
+
+/* Animowany gradient */
+@keyframes pastel-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Nagłówek */
+header {
+    background-color: #bde0fe; /* Pastelowy błękit */
+    color: #1d3557; /* Granatowy */
+    text-align: center;
+    padding: 1em;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Główna zawartość */
+.container {
+    background-color: #ffcad4; /* Jasny pastelowy róż */
+    border: 3px solid #fec5bb; /* Brzoskwiniowy pastel */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Stylizacja nagłówków */
+h1, h2, h3 {
+    color: #457b9d; /* Pastelowy granat */
+}
+
+h1 {
+    font-size: 2.4em;
+    margin: 15px 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin: 8px 0;
+}
+
+/* Paragrafy */
+p {
+    font-size: 1.1em;
+    color: #6d6875; /* Ciemny pastelowy fiolet */
+    text-align: justify;
+    margin: 10px 0;
+}
+
+/* Listy */
+ul {
+    list-style-type: square;
+    margin: 10px 0;
+    padding: 0 20px;
+    color: #f4a261; /* Pastelowy pomarańcz */
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+/* Stopka */
+footer {
+    background-color: #a2d2ff; /* Pastelowy błękit */
+    color: #1d3557; /* Granatowy */
+    text-align: center;
+    padding: 1em;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+/* Styl dla obrazków */
+img {
+    border: 3px solid #ffafcc; /* Pastelowy róż */
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#style-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    background-color: #ffc8dd;
+    color: #333;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#style-links a:hover {
+    background-color: #ffafcc;
+    transform: scale(1.05);
+}
+
+
+/* Stylowanie dla ekranów o szerokości 768px lub mniejszej */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+/* Stylowanie dla ekranów o szerokości 480px lub mniejszej */
+@media (max-width: 480px) {
+    header, footer {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
